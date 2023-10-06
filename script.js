@@ -1,5 +1,5 @@
 let classifier;
-let imageModelURL = 'Tu_Modelo'; // URL del modelo de Teachable Machine
+let imageModelURL = 'https://teachablemachine.withgoogle.com/models/rxtwzpva3/'; // URL del modelo de Teachable Machine
 let fileInput;
 let label = "";
 let img;
@@ -21,7 +21,7 @@ function handleFile(file) {
   if (file.type === 'image') { // Verifica que el archivo sea una imagen
     img = createImg(file.data, ''); // Crea un elemento de imagen y carga el archivo
     img.hide(); // Oculta la imagen original
-    img.size(640, 480); // Establece el tamaño de la imagen
+    img.size(1000, 180); // Establece el tamaño de la imagen
     image(img, 0, 0); // Muestra la imagen en el canvas
     classifyImage(); // Clasifica la imagen
   } else {
